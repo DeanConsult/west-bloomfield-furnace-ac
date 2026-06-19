@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | West Bloomfield Furnace and AC | HVAC West Bloomfield MI</title>
+  <meta name="description" content="Over 15 years serving West Bloomfield MI and Metro Detroit. Locally owned HVAC company specializing in furnace repair, AC repair, installation, and 24/7 emergency service." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.wbheatingandac.com/about/" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --orange: #e05c28;
+      --orange-dark: #c44d1f;
+      --slate: #1c2b3a;
+      --slate-light: #263d52;
+      --white: #ffffff;
+      --gray: #f5f6f8;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --radius: 8px;
+    }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--white); }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    nav { background: var(--slate); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-brand { color: var(--white); font-weight: 800; font-size: 1.1rem; letter-spacing: -.01em; line-height: 1.2; }
+    .nav-brand span { color: var(--orange); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.92rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--orange); }
+    .btn-call { background: var(--orange); color: var(--white); padding: 9px 20px; border-radius: var(--radius); font-weight: 700; font-size: 0.88rem; transition: background .2s; }
+    .btn-call:hover { background: var(--orange-dark); color: var(--white); }
+    @media (max-width: 768px) { .nav-links { display: none; } .btn-call { display: none; } }
+
+    .page-hero { background: var(--slate); padding: 56px 24px; text-align: center; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background-image: url('/images/stock-photo-hvac-tech-fixing-gas-furnace-gray-shirt.jpeg'); background-size: cover; background-position: center; opacity: 0.2; }
+    .page-hero-content { position: relative; z-index: 1; }
+    .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: var(--white); margin-bottom: 12px; }
+    .page-hero h1 span { color: var(--orange); }
+    .page-hero p { color: rgba(255,255,255,0.75); font-size: 1rem; max-width: 580px; margin: 0 auto; line-height: 1.7; }
+
+    section { padding: 72px 24px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--orange-dark); margin-bottom: 10px; }
+    .section-title { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; color: var(--slate); margin-bottom: 16px; line-height: 1.2; }
+
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .about-text p { font-size: 1rem; color: #374151; line-height: 1.8; margin-bottom: 18px; }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-imgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .about-imgs img { width: 100%; border-radius: 10px; object-fit: cover; height: 180px; }
+    .about-imgs img:first-child { grid-column: span 2; height: 180px; }
+
+    .values-section { background: var(--gray); }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 16px; }
+    @media (max-width: 768px) { .values-grid { grid-template-columns: 1fr; } }
+    .value-card { background: var(--white); border-radius: 12px; padding: 28px 24px; box-shadow: var(--shadow); border-top: 4px solid var(--orange); }
+    .value-icon { width: 48px; height: 48px; background: rgba(224,92,40,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .value-icon svg { width: 24px; height: 24px; color: var(--orange); }
+    .value-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--slate); margin-bottom: 8px; }
+    .value-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+
+    .awards-section { border-left: 4px solid var(--orange); padding-left: 24px; margin-top: 40px; }
+    .awards-section h3 { font-size: 1.1rem; font-weight: 700; color: var(--slate); margin-bottom: 12px; }
+    .award-item { margin-bottom: 14px; }
+    .award-item strong { display: block; color: var(--slate); font-size: 0.92rem; }
+    .award-item span { font-size: 0.87rem; color: var(--muted); }
+
+    .cta-banner { background: var(--slate); padding: 56px 24px; text-align: center; }
+    .cta-banner h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; color: var(--white); margin-bottom: 12px; }
+    .cta-banner p { color: rgba(255,255,255,0.75); margin-bottom: 28px; font-size: 1rem; }
+    .btn-cta { background: var(--orange); color: var(--white); padding: 14px 32px; border-radius: var(--radius); font-weight: 700; font-size: 1rem; transition: background .2s, transform .15s; display: inline-block; }
+    .btn-cta:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+    footer { background: var(--slate); color: rgba(255,255,255,0.7); padding: 40px 24px 24px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; margin-bottom: 32px; }
+    .footer-brand { font-size: 1.05rem; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .footer-brand span { color: var(--orange); }
+    .footer-tagline { font-size: 0.85rem; max-width: 260px; line-height: 1.6; }
+    .footer-links h4 { color: var(--white); font-size: 0.82rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; }
+    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: 0.88rem; color: rgba(255,255,255,0.65); transition: color .2s; }
+    .footer-links a:hover { color: var(--orange); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.5); }
+    .partner-links { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">West Bloomfield<br><span>Furnace &amp; AC</span></div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About Us</a></li>
+      <li><a href="/services/">Our Services</a></li>
+      <li><a href="/#contact">Contact Us</a></li>
+    </ul>
+    <a href="tel:2482908514" class="btn-call">Call 248-290-8514</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <h1>About <span>West Bloomfield Furnace &amp; AC</span></h1>
+    <p>Locally owned and operated. Serving West Bloomfield MI and the Greater Oakland County community for over 15 years.</p>
+  </div>
+</div>
+
+<section>
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-label">Our Story</div>
+        <div class="section-title">15+ Years of Trusted HVAC Service</div>
+        <p>At West Bloomfield Furnace and AC, we have over 15 years of experience working in the HVAC industry. We have built a great reputation in the West Bloomfield area and can service most of the Metro Detroit market. We serve both residential and commercial customers and offer 24-hour emergency service for those who need help right now.</p>
+        <p>Because of our reputation, most of the work we do comes from repeat customers or referrals from our current customers — and that tells us we must be doing something right.</p>
+        <p>All of our technicians have many years of experience and undergo continued education on new innovations and techniques in the HVAC industry. It is our goal to provide you with the best HVAC products and services on the market at competitive prices, because doing great work for a fair price is the key to keeping customers for life.</p>
+
+        <div class="awards-section">
+          <h3>Awards &amp; Recognition</h3>
+          <div class="award-item">
+            <strong>Top Heating &amp; Cooling Company — Metro Detroit Review</strong>
+            <span>December 2020 — Ranked among the top HVAC companies in the Detroit Area based on online reviews.</span>
+          </div>
+          <div class="award-item">
+            <strong>Top 100 HVAC Contractors in Michigan — Michigan Review Board</strong>
+            <span>June 2021 — Honored as one of the top-ranked heating and cooling companies in the state.</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="about-imgs">
+          <img src="/images/depositphotos_163284600-stock-photo-air-conditioning-repair-concept.jpg" alt="HVAC technician repairing AC unit in West Bloomfield Michigan" />
+          <img src="/images/istockphoto-1464462569-612x612.jpg" alt="Air filter service West Bloomfield MI" />
+          <img src="/images/hvac-service-technician-changing-dirty-600nw-2022720050.webp" alt="Furnace filter replacement West Bloomfield Michigan" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="section-inner">
+    <div class="section-label">Why Choose Us</div>
+    <div class="section-title">What Sets Us Apart</div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <h3>Quality You Can Trust</h3>
+        <p>We use only the best products and stay current on all HVAC industry advancements. Our skilled crews keep every job site safe, clean, and professional.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3>Available 24/7</h3>
+        <p>Heating and cooling emergencies don't follow a schedule. We're available around the clock — nights, weekends, and holidays — because your comfort is always a priority.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3>Fair, Competitive Pricing</h3>
+        <p>We believe doing great work at a fair price is the key to earning customers for life. We'll always give you an honest estimate — no surprises on your bill.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+        <h3>Experienced Technicians</h3>
+        <p>Every technician is trained on all makes and models, and undergoes continued education on the latest HVAC innovations before they're sent to your home or business.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg></div>
+        <h3>Built on Referrals</h3>
+        <p>The majority of our new customers come from referrals and repeat business — the highest compliment a customer can give. We earn your trust every single visit.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+        <h3>Residential &amp; Commercial</h3>
+        <p>Whether it's a home furnace or a commercial HVAC system, we have the expertise and equipment to handle jobs of any size across the Metro Detroit area.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Ready to Experience the Difference?</h2>
+  <p>Call us today or request a free estimate online. We respond within 1 business hour.</p>
+  <a href="/#contact" class="btn-cta">Get a Free Estimate</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">West Bloomfield <span>Furnace &amp; AC</span></div>
+        <p class="footer-tagline">Serving West Bloomfield MI and Metro Detroit with trusted HVAC service for over 15 years.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/services/">Our Services</a></li>
+          <li><a href="/#contact">Contact Us</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/">Furnace Repair</a></li>
+          <li><a href="/services/">Furnace Installation</a></li>
+          <li><a href="/services/">AC Repair</a></li>
+          <li><a href="/services/">AC Installation</a></li>
+          <li><a href="/services/">24/7 Emergency HVAC</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 West Bloomfield Furnace and AC. All rights reserved.</span>
+      <a href="/privacy-policy/">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="partner-links">
+    <a href="http://www.westbloomplumbing.com/">West Bloomfield Plumbing Company</a>
+  </div>
+</footer>
+
+</body>
+</html>
+
