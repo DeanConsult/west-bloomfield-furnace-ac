@@ -34,7 +34,16 @@
     .nav-links a:hover { color: var(--orange); }
     .btn-call { background: var(--orange); color: var(--white); padding: 9px 20px; border-radius: var(--radius); font-weight: 700; font-size: 0.88rem; transition: background .2s; }
     .btn-call:hover { background: var(--orange-dark); color: var(--white); }
-    @media (max-width: 768px) { .nav-links { display: none; } .btn-call { display: none; } }
+    .hamburger { display: none; background: none; border: none; font-size: 1.6rem; color: var(--white); cursor: pointer; padding: 4px 8px; line-height: 1; }
+    @media (max-width: 768px) {
+      .nav-inner { position: relative; }
+      .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--slate); flex-direction: column; gap: 0; box-shadow: 0 8px 20px rgba(0,0,0,0.3); padding: 8px 24px; z-index: 99; }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .btn-call { display: none; }
+      .hamburger { display: block; }
+    }
 
     .page-hero { background: var(--slate); padding: 56px 24px; text-align: center; position: relative; overflow: hidden; }
     .page-hero::before { content: ''; position: absolute; inset: 0; background-image: url('../images/istockphoto-1204755508-612x612.jpg'); background-size: cover; background-position: center; opacity: 0.2; }
@@ -98,6 +107,7 @@
       <li><a href="../#contact">Contact Us</a></li>
     </ul>
     <a href="tel:2482908514" class="btn-call">Call 248-290-8514</a>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
   </div>
 </nav>
 
@@ -238,6 +248,24 @@
     </div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var hb = document.querySelector(".hamburger");
+    var nv = document.querySelector(".nav-links");
+    if (!hb || !nv) return;
+    hb.addEventListener("click", function () {
+      var open = nv.classList.toggle("open");
+      hb.setAttribute("aria-expanded", open);
+    });
+    nv.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        nv.classList.remove("open");
+        hb.setAttribute("aria-expanded", "false");
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
