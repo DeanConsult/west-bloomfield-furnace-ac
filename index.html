@@ -162,6 +162,27 @@
     .btn-submit:hover { background: var(--orange-dark); transform: translateY(-1px); }
     .form-note { font-size: 0.78rem; color: var(--muted); text-align: center; margin-top: 10px; }
 
+    /* CTA BANNERS */
+    .cta-banner { background: var(--slate); padding: 52px 24px; text-align: center; }
+    .cta-banner h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; color: var(--white); margin-bottom: 10px; }
+    .cta-banner p { color: rgba(255,255,255,0.75); margin-bottom: 28px; font-size: 1rem; }
+    .cta-phone { display: inline-block; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: var(--orange); letter-spacing: -.01em; margin-bottom: 20px; line-height: 1; }
+    .cta-phone:hover { color: #ff7a45; }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; align-items: center; }
+    .btn-cta-primary { background: var(--orange); color: var(--white); padding: 14px 32px; border-radius: var(--radius); font-weight: 700; font-size: 1rem; transition: background .2s, transform .15s; display: inline-block; }
+    .btn-cta-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+    .btn-cta-outline { border: 2px solid rgba(255,255,255,0.35); color: var(--white); padding: 13px 28px; border-radius: var(--radius); font-weight: 600; font-size: 0.95rem; transition: border-color .2s; display: inline-block; }
+    .btn-cta-outline:hover { border-color: var(--white); }
+    .call-strip { background: var(--orange); padding: 24px; text-align: center; }
+    .call-strip p { color: var(--white); font-size: 1rem; font-weight: 600; margin-bottom: 10px; }
+    .call-strip a.strip-phone { color: var(--white); font-size: 1.5rem; font-weight: 900; letter-spacing: -.01em; display: inline-block; border: 2px solid rgba(255,255,255,0.5); border-radius: var(--radius); padding: 8px 28px; transition: background .2s; }
+    .call-strip a.strip-phone:hover { background: rgba(0,0,0,0.12); }
+
+    /* MOBILE STICKY CALL BUTTON */
+    .mobile-call-btn { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--orange); color: var(--white); text-align: center; padding: 16px; font-weight: 800; font-size: 1.1rem; letter-spacing: .01em; box-shadow: 0 -4px 16px rgba(0,0,0,0.2); }
+    .mobile-call-btn:hover { background: var(--orange-dark); }
+    @media (max-width: 768px) { .mobile-call-btn { display: block; } body { padding-bottom: 58px; } }
+
     /* FOOTER */
     footer { background: var(--slate); color: rgba(255,255,255,0.7); padding: 40px 24px 24px; }
     .footer-inner { max-width: 1100px; margin: 0 auto; }
@@ -286,6 +307,16 @@
   </div>
 </section>
 
+<div class="cta-banner">
+  <h2>Need HVAC Service in West Bloomfield?</h2>
+  <p>We come out within 24–48 hours. For emergencies, we're available right now — day or night.</p>
+  <a href="tel:2482908514" class="cta-phone">248-290-8514</a>
+  <div class="cta-actions">
+    <a href="tel:2482908514" class="btn-cta-primary">Call Now — We're Ready</a>
+    <a href="#contact" class="btn-cta-outline">Send a Message Instead</a>
+  </div>
+</div>
+
 <section>
   <div class="section-inner">
     <div class="section-label">Our Work</div>
@@ -353,6 +384,11 @@
   ]
 }
 </script>
+
+<div class="call-strip">
+  <p>Prefer to talk to someone? We can often give you a quote right over the phone.</p>
+  <a href="tel:2482908514" class="strip-phone">Call 248-290-8514</a>
+</div>
 
 <section id="contact" style="background: var(--gray);">
   <div class="section-inner">
@@ -450,6 +486,8 @@
     </div>
   </div>
 </footer>
+
+<a href="tel:2482908514" class="mobile-call-btn">Call Now — 248-290-8514</a>
 
 <script>
   (function () {
