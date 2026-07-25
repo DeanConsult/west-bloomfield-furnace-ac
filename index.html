@@ -212,7 +212,7 @@
     .call-strip a.strip-phone:hover { background: rgba(0,0,0,0.12); }
 
     /* MOBILE STICKY CALL BUTTON */
-    .mobile-call-btn { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; opacity: 0; pointer-events: none; transition: opacity .3s ease; background: var(--orange); color: var(--white); text-align: center; padding: 16px; font-weight: 800; font-size: 1.1rem; letter-spacing: .01em; box-shadow: 0 -4px 16px rgba(0,0,0,0.2); }
+    .mobile-call-btn { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--orange); color: var(--white); text-align: center; padding: 16px; font-weight: 800; font-size: 1.1rem; letter-spacing: .01em; box-shadow: 0 -4px 16px rgba(0,0,0,0.2); }
     .mobile-call-btn:hover { background: var(--orange-dark); }
     @media (max-width: 768px) { .mobile-call-btn { display: block; } body { padding-bottom: 58px; } }
 
@@ -538,7 +538,6 @@
       });
     });
   })();
-  setTimeout(function(){var b=document.querySelector('.mobile-call-btn');if(b){b.style.opacity='1';b.style.pointerEvents='auto';}},800);
 </script>
 
 </body>
