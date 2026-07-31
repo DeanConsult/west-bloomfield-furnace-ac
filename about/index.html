@@ -259,7 +259,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2025 West Bloomfield Furnace and AC. All rights reserved.</span>
+      <span>&copy; <span id="yr"></span> West Bloomfield Furnace and AC. All rights reserved.</span>
       <a href="../privacy-policy/">Privacy Policy</a>
     </div>
   </div>
@@ -281,8 +281,10 @@
       });
     });
   })();
+  document.getElementById("yr").textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
+
 

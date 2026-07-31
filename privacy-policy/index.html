@@ -103,7 +103,7 @@
 </div>
 
 <footer>
-  <span>&copy; 2025 West Bloomfield Furnace and AC.</span>
+  <span>&copy; <span id="yr"></span> West Bloomfield Furnace and AC.</span>
   <a href="/">Home</a>
   <a href="../privacy-policy/">Privacy Policy</a>
   <a href="../resources/">Resources</a>
@@ -125,6 +125,7 @@
       });
     });
   })();
+  document.getElementById("yr").textContent = new Date().getFullYear();
 </script>
 
 </body>
