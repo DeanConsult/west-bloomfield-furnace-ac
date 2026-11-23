@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.wbheatingandac.com/sitemap.xml
+Sitemap: https://wbheatingandac.com/sitemap.xml
